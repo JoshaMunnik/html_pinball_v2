@@ -1,0 +1,85 @@
+@import 'config.less';
+@import 'utils.less';
+
+.status-display {
+  &__container {
+    background: @color-light-green;
+    height: 42px;
+    width: inherit;
+    .noSelect();
+    .noEvents();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    line-height: 0.9;
+
+    @media @mobile {
+      height: 60px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo-container {
+    height: 25px;
+    order: 0;
+    padding: 0 0 0 0.5rem;
+
+    @media @mobile {
+      height: 20px;
+    }
+  }
+
+  &__logo-image {
+    height: 100%;
+    width: auto;
+  }
+
+  &__label {
+    font-family: Ozone, monospace;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: white;
+    text-shadow: 0 0 4px rgba(0,0,0,1);
+    margin-right: 0.25em;
+
+    @media @mobile {
+    }
+  }
+
+  &__value {
+    font-family: Ozone, monospace;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: @color-purple;
+    //text-shadow: 0 0 4px rgba(0,0,0,0.7);
+
+    @media @mobile {
+    }
+  }
+
+  &__entry {
+    padding: 0 0.5em;
+
+    &--is-your-score {
+      @media @mobile {
+        order: 2;
+      }
+    }
+
+    &--is-balls {
+      @media @mobile {
+        order: 3;
+      }
+    }
+
+    &--is-highscore {
+      @media @mobile {
+        order: 1;
+      }
+    }
+  }
+
+
+}

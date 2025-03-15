@@ -1,0 +1,32 @@
+{
+  "name": "html-pinball",
+  "version": "1.0.0",
+  "description": "Pinball game for use within a html page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --config webpack.development.js",
+    "build": "webpack --config webpack.production.js"
+  },
+  "author": "Josha Munnik",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/matter-js": "^0.19.5",
+    "@ultraforce/ts-dom-lib": "^1.0.9",
+    "matter-attractors": "^0.1.6",
+    "matter-js": "^0.19.0",
+    "poly-decomp": "^0.3.0",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.10.0",
+    "zcanvas": "^5.1.10"
+  },
+  "dependencies": {
+    "@ultraforce/ts-general-lib": "^1.0.8"
+  },
+  "browser": {
+    "[module-name]": false
+  }
+}

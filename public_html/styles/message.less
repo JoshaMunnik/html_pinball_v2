@@ -1,0 +1,42 @@
+@import 'config.less';
+
+.message {
+  &__container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+  }
+
+  &__text {
+    font-family: Ozone, monospace;
+    font-size: 8rem;
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px @color-purple;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: block;
+
+    @media @mobile {
+      font-size: 4rem;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    &--hide {
+      font-size: 12rem;
+
+      @media @mobile {
+        font-size: 6rem;
+      }
+
+      color: rgba(255, 255, 255, 0);
+      text-shadow: 0 0 10px fadeout(@color-purple, 100%);
+      transition: font-size 2s, color 2s, text-shadow 2s;
+    }
+
+  }
+}

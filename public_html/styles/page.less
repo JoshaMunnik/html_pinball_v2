@@ -1,0 +1,48 @@
+@import 'config.less';
+
+
+.page {
+  display: none;
+  flex-direction: column;
+  max-width: 800px;
+  flex: 1;
+  height: 100%;
+  width: inherit;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  &--is-visible {
+    display: flex;
+  }
+
+  &__loading {
+    min-height: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: stretch;
+    background: @color-light-green;
+    width: 100%;
+  }
+
+  &__game {
+  }
+
+  &__introduction {
+    align-items: center;
+    background: @color-light-green;
+    overflow: auto;
+  }
+
+  &__finished {
+    align-items: center;
+    background: @color-light-green;
+    overflow: auto;
+  }
+}

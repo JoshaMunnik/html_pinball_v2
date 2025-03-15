@@ -1,0 +1,33 @@
+@import 'config.less';
+
+.center( @position: absolute ) {
+  position: @position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.noSelect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.noEvents() {
+  pointer-events: none;
+}
+
+.textOverflow() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scrollableWindow() {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

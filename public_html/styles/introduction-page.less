@@ -1,0 +1,82 @@
+
+@import 'config.less';
+
+.introduction {
+  &__title {
+    margin: 0;
+  }
+
+  &__logo-container {
+    padding: 3rem 4rem;
+
+    @media @mobile {
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__logo-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__label {
+    font-family: Ozone, monospace;
+    font-size: ~"clamp(24px, -8.7273px + 9.0909vw, 64px)";
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgba(0,0,0,1);
+  }
+
+  &__text {
+    margin: 2rem 0;
+    font-size: ~"clamp(0.7rem, -0.1250rem + 3.6667vw, 1.8rem)";
+    padding: 0 4rem;
+    text-align: center;
+
+    @media @mobile {
+      margin: 0.5rem 0;
+      padding: 0 2rem;
+    }
+  }
+
+  &__explanation {
+    margin: 2rem 0;
+    font-size: ~"clamp(0.5rem, -0.0250rem + 2.3333vw, 1.2rem)";
+    padding: 0 4rem;
+
+    @media @mobile {
+      margin: 0.5rem 0;
+      padding: 0 2rem;
+    }
+  }
+
+  &__value {
+    font-family: Ozone, monospace;
+    font-size: ~"clamp(24px, -8.7273px + 9.0909vw, 64px)";
+    color: @color-purple;
+    text-transform: uppercase;
+    margin-left: 0.25em;
+  }
+
+  &__start-button-container {
+    width: 238px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 3rem 0;
+
+    @media @mobile {
+      margin: 1.5rem 0 0.5rem;
+    }
+  }
+
+  &__start-button-image {
+    width: 238px;
+    height: 238px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+  }
+
+  &__highscore {
+    margin: 0;
+  }
+}

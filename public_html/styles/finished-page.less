@@ -1,0 +1,67 @@
+
+@import 'config.less';
+
+.finished {
+  &__title {
+    margin: 0;
+  }
+
+  &__logo-container {
+    padding: 3rem 4rem;
+
+    @media @mobile {
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__logo-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__label {
+    font-family: Ozone, monospace;
+    font-size: ~"clamp(24px, -8.7273px + 9.0909vw, 64px)";
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgba(0,0,0,1);
+  }
+
+  &__text {
+    margin: 3rem 0;
+    font-size: ~"clamp(0.8em, 0.6250em + 1.6667vw, 1.5em)";
+    text-align: center;
+    font-weight: 600;
+    padding: 0 3rem;
+  }
+
+  &__value {
+    font-family: Ozone, monospace;
+    font-size: ~"clamp(24px, -8.7273px + 9.0909vw, 64px)";
+    color: @color-purple;
+    text-transform: uppercase;
+    margin-left: 0.25em;
+  }
+
+  &__start-button-container {
+    width: 238px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 3rem 0;
+  }
+
+  &__start-button-image {
+    width: 238px;
+    height: 238px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+  }
+
+  &__highscore {
+    margin: 2rem 0;
+  }
+
+  &__score {
+    margin: 3rem 0;
+  }
+}
