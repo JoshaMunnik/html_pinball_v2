@@ -12,8 +12,12 @@ import {Config} from "../../../config/Config";
 
 // region internals
 
-const ROW_COUNT: number = 8;
+const ROW_COUNT: number = 25;
 const COL_COUNT: number = 3;
+const FRAME_WIDTH: number = 261 / COL_COUNT;
+const FRAME_HEIGHT: number = 4800 / ROW_COUNT;
+const FRAME_RATE: number = 15;
+const DURATION: number = ROW_COUNT * COL_COUNT * 1000 / FRAME_RATE;
 
 // endregion
 
@@ -28,7 +32,7 @@ export class WindMillsRenderer extends sprite {
   private m_scoreCount: number;
 
   constructor(aMainData: MainModel) {
-    super({x: 594, y: 511, width: 154, height: 196});
+    super({x: 640, y: 475, width: FRAME_WIDTH, height: FRAME_HEIGHT});
     this.m_mainData = aMainData;
     this.m_windmillChangeListener = () => this.handleWindmillChange();
     this.m_mainData.addPropertyChangeListener(
@@ -55,18 +59,17 @@ export class WindMillsRenderer extends sprite {
     if (this.m_start < 0) {
       return;
     }
-    if (window.performance.now() - this.m_start > Config.WINDMILL_DURATION) {
-      this.m_start = -1;
-      return;
-    }
     if (this.m_lastTimeStamp < 0) {
       this.m_lastTimeStamp = timestamp;
       return;
     }
-    if (timestamp - this.m_lastTimeStamp > 1000 / 12) {
+    if (timestamp - this.m_lastTimeStamp > 1000 / FRAME_RATE) {
       this.m_frame = (this.m_frame + 1) % (ROW_COUNT * COL_COUNT);
       this.m_lastTimeStamp = timestamp;
       this.invalidate();
+      if (this.m_frame == 0) {
+        this.m_start = -1;
+      }
     }
   }
 
@@ -78,7 +81,7 @@ export class WindMillsRenderer extends sprite {
     const col = this.m_frame % COL_COUNT;
     const row = Math.floor(this.m_frame / COL_COUNT);
     ctx.drawImage(
-      Images.WINDMILLS,
+      Images.SPRITE_SHEET_15FPS,
       col * width,
       row * height,
       width,

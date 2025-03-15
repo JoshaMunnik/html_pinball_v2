@@ -129,15 +129,16 @@ export class Game {
    * @return true if canvas was scaled, false otherwise
    */
   scaleCanvas(clientWidth: number, clientHeight: number): boolean {
+    console.debug({clientWidth, clientHeight});
+    const zoom = clientWidth > clientHeight
+      ? Math.min(1.0, clientWidth / this.m_table.width)
+      : clientWidth / this.m_table.width;
     const tableHeight: number = this.m_table.height + Config.LAUNCHER_SPACE;
     const ratio = tableHeight / this.m_table.width;
-    const width = Math.min(this.m_table.width, clientWidth);
+    const width = clientWidth; //Math.min(this.m_table.width, clientWidth);
     const height = Math.min(clientHeight, Math.round(width * ratio));
     // by setting the dimensions we have set the "world size"
     this.m_canvas.setDimensions(this.m_table.width, tableHeight);
-    // take into account that certain resolutions are lower than the table width
-    const zoom = clientWidth < this.m_table.width ? clientWidth / this.m_table.width : 1;
-    // the viewport however is local to the client window size
     const viewportWidth: number = width / zoom;
     const viewportHeight: number = height / zoom;
     //console.debug({width, height, zoom, viewportWidth, viewportHeight});

@@ -53,30 +53,31 @@
   &__value {
     font-family: Ozone, monospace;
     font-size: ~"clamp(24px, -8.7273px + 9.0909vw, 64px)";
-    color: @color-purple;
+    color: white;
     text-transform: uppercase;
     margin-left: 0.25em;
   }
 
   &__start-button-container {
-    width: 238px;
+    position: absolute;
+    top: 600px;
+    left: 250px;
+    width: 300px;
     border: none;
     background: none;
     cursor: pointer;
-    margin: 3rem 0;
-
-    @media @mobile {
-      margin: 1.5rem 0 0.5rem;
-    }
   }
 
   &__start-button-image {
-    width: 238px;
-    height: 238px;
-    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    width: 300px;
+    height: 300px;
   }
 
   &__highscore {
-    margin: 0;
+    position: absolute;
+    top: 900px;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
 }

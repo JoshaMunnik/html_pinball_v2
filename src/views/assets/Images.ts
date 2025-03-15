@@ -58,6 +58,8 @@ export const Images = new class ImagesClass {
   readonly WINDMILLS_TOP: HTMLImageElement = this.loadImage(`${Config.IMAGES_PATH}/windmills_top.png`);
   readonly YELLOW_ARROW_OFF: HTMLImageElement = this.loadImage(`${Config.IMAGES_PATH}/yellow_arrow_off.png`);
   readonly YELLOW_ARROW_ON: HTMLImageElement = this.loadImage(`${Config.IMAGES_PATH}/yellow_arrow_on.png`);
+  readonly SPRITE_SHEET_10FPS: HTMLImageElement = this.loadImage(`${Config.IMAGES_PATH}/sprite_sheet_10fps.png`);
+  readonly SPRITE_SHEET_15FPS: HTMLImageElement = this.loadImage(`${Config.IMAGES_PATH}/sprite_sheet_15fps.png`);
 
   // endregion
   

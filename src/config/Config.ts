@@ -24,7 +24,7 @@ export class Config {
   static readonly RETRY_TIMEOUT: number = 4800;
 
   // duration of animation and that ball is stuck
-  static readonly WINDMILL_DURATION: number = 1500;
+  static readonly WINDMILL_DURATION: number = 2500;
 
   static readonly MESSAGE_DURATION: number = 2000;
 

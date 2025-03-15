@@ -4,7 +4,7 @@
 .page {
   display: none;
   flex-direction: column;
-  max-width: 800px;
+  //max-width: 800px;
   flex: 1;
   height: 100%;
   width: inherit;
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
   }
 
@@ -35,9 +35,17 @@
   }
 
   &__introduction {
-    align-items: center;
-    background: @color-light-green;
+    background: url('../images/background_start.png') 0 0 no-repeat;
     overflow: auto;
+    position: relative;
+    height: 1521px;
+    width: 800px;
+    transform-origin: top left;
+
+    @media (orientation: portrait) {
+      /* Styles for when the height is larger than the width */
+      scale: calc(var(--screen-width) / 800);
+    }
   }
 
   &__finished {

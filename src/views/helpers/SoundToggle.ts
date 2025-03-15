@@ -15,6 +15,7 @@ export class SoundToggle {
   private readonly m_speakerOff: HTMLElement = document.getElementById('sound-toggle-speaker-off');
 
   constructor(aMainController: MainController, aMainData: MainModel) {
+    this.m_container.style.display = 'none';
     if (BrowserTools.getMobileOs() == MobileOs.iOS) {
       this.m_container.style.display = 'none';
     }

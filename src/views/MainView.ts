@@ -16,6 +16,18 @@ export class MainView {
 
   constructor(aMainController: MainController, aMainData: MainModel) {
     this.m_pages = new Pages(aMainController, aMainData);
+    window.addEventListener("resize", () => this.handleResize());
+    this.handleResize();
+  }
+
+  // endregion
+
+  // region event handler
+
+  private handleResize(): void {
+    const {clientWidth, clientHeight} = document.documentElement;
+    document.documentElement.style.setProperty('--screen-width', `${clientWidth}`);
+    document.documentElement.style.setProperty('--screen-height', `${clientHeight}`);
   }
 
   // endregion

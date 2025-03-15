@@ -11,9 +11,9 @@ export class TopLeftBumperRenderer extends ScoreBaseRenderer {
       Images.TOP_LEFT_BUMPER_OFF,
       Images.TOP_LEFT_BUMPER_ON,
       140,
-      410,
-      26,
-      118,
+      398,
+      37,
+      133,
       15
     );
   }
