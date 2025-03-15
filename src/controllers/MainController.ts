@@ -88,11 +88,11 @@ export class MainController {
   }
 
   gameOver(): void {
-    this.m_mainData.page = Page.Introduction;
-    /*
     if (this.m_mainData.score > this.m_mainData.highscore) {
       this.m_mainData.highscore = this.m_mainData.score;
     }
+    this.m_mainData.page = Page.Introduction;
+    /*
     this.m_mainData.page = Page.Finished;
     this.m_scoreService
       .saveScore(this.m_mainData.score)

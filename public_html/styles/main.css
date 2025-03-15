@@ -107,7 +107,7 @@
 .introduction__start-button-container {
   position: absolute;
   top: 600px;
-  left: 250px;
+  left: 278px;
   width: 300px;
   border: none;
   background: none;
@@ -213,13 +213,13 @@
   overflow: auto;
   position: relative;
   height: 1521px;
-  width: 800px;
+  width: 856px;
   transform-origin: top left;
 }
 @media (orientation: portrait) {
   .page__introduction {
     /* Styles for when the height is larger than the width */
-    scale: calc(var(--screen-width) / 800);
+    scale: calc(var(--screen-width) / 856);
   }
 }
 .page__finished {

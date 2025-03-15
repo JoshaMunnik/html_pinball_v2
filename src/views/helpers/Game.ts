@@ -147,7 +147,7 @@ export class Game {
     this.m_canvas.scale(zoom);
     // the vertical offset at which the viewport should pan to follow the ball
     this.m_panOffset = (viewportHeight / 2) - (Config.BALL_SIZE / 2);
-    return zoom < 1;
+    return true;
   }
 
   setFlipperState(type: FlipperType, isPointerDown: boolean): void {
@@ -575,7 +575,7 @@ export class Game {
     // align viewport with ball (if any)
     const {top, left} = this.m_ball.bounds;
     const y: number = top - this.m_panOffset;
-    this.m_canvas.panViewport(0, y);
+    //this.m_canvas.panViewport(0, y);
     // ball is outside of game
     if ((left < 0) || (left >= this.m_table.width)) {
       // remove it
