@@ -346,5 +346,6 @@ html {
   width: 100%;
   background: white;
   font-family: Verdana, sans-serif;
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */

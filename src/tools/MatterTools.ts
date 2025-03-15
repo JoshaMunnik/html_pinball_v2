@@ -8,7 +8,7 @@ export class MatterTools {
    */
   static setupTableBody(body: Matter.Body): Matter.Body {
     if (DevTools.isDevelopment()) {
-      console.debug({body});
+      //console.debug({body});
     }
     body.friction = 0;
     body.restitution = 0;

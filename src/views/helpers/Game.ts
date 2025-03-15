@@ -129,7 +129,6 @@ export class Game {
    * @return true if canvas was scaled, false otherwise
    */
   scaleCanvas(clientWidth: number, clientHeight: number): boolean {
-    console.debug({clientWidth, clientHeight});
     const zoom = clientWidth > clientHeight
       ? Math.min(1.0, clientWidth / this.m_table.width)
       : clientWidth / this.m_table.width;
@@ -141,7 +140,7 @@ export class Game {
     this.m_canvas.setDimensions(this.m_table.width, tableHeight);
     const viewportWidth: number = width / zoom;
     const viewportHeight: number = height / zoom;
-    console.debug({width, height, zoom, viewportWidth, viewportHeight, tableHeight});
+    //console.debug({width, height, zoom, viewportWidth, viewportHeight, tableHeight});
     this.m_canvas.setViewport(viewportWidth, viewportHeight);
     // scale canvas to fit in the width
     this.m_canvas.scale(zoom);

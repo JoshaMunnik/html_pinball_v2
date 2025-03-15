@@ -88,8 +88,8 @@ export class GamePage extends PageBase {
     //this.m_soundToggle = new SoundToggle(aMainController, aMainData);
     this.m_message = new Message(aMainController, aMainData);
     this.m_canvas = new canvas({
-      width: 600,
-      height: 1200,
+      width: 2000,
+      height: 4000,
       animate: true,
       fps: Config.FRAME_RATE,
       onUpdate: (timestamp: DOMHighResTimeStamp, framesSinceLastRender: number) => this.handleCanvasUpdate(timestamp, framesSinceLastRender)
@@ -182,7 +182,7 @@ export class GamePage extends PageBase {
     const statusHeight: number = this.m_statusContainer.clientHeight;
     const isMobileView: boolean = clientWidth <= 685; // see _variables.scss
     const uiHeight: number = isMobileView ? statusHeight : statusHeight;
-    const canvasHeight: number = Math.min(this.m_table.height, clientHeight) - uiHeight;
+    const canvasHeight: number = clientHeight - uiHeight;
     //console.debug({clientWidth, clientHeight, statusHeight, isMobileView, uiHeight, canvasHeight});
     if (this.m_game.scaleCanvas(clientWidth, canvasHeight)) {
       //this.m_canvasContainer.classList.remove(CENTER_CANVAS_CLASS);
