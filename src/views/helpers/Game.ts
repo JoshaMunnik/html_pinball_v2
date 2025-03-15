@@ -141,7 +141,7 @@ export class Game {
     this.m_canvas.setDimensions(this.m_table.width, tableHeight);
     const viewportWidth: number = width / zoom;
     const viewportHeight: number = height / zoom;
-    //console.debug({width, height, zoom, viewportWidth, viewportHeight});
+    console.debug({width, height, zoom, viewportWidth, viewportHeight, tableHeight});
     this.m_canvas.setViewport(viewportWidth, viewportHeight);
     // scale canvas to fit in the width
     this.m_canvas.scale(zoom);
@@ -575,7 +575,7 @@ export class Game {
     // align viewport with ball (if any)
     const {top, left} = this.m_ball.bounds;
     const y: number = top - this.m_panOffset;
-    //this.m_canvas.panViewport(0, y);
+    this.m_canvas.panViewport(0, y);
     // ball is outside of game
     if ((left < 0) || (left >= this.m_table.width)) {
       // remove it

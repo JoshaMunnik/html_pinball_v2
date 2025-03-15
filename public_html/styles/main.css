@@ -210,7 +210,7 @@
 }
 .page__introduction {
   background: url('../images/background_start.png') 0 0 no-repeat;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   height: 1521px;
   width: 856px;

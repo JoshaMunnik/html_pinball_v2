@@ -85,11 +85,11 @@ export class GamePage extends PageBase {
     this.m_mainController = aMainController;
     this.m_mainData = aMainData;
     this.m_statusDisplay = new StatusDisplay(aMainData);
-    this.m_soundToggle = new SoundToggle(aMainController, aMainData);
+    //this.m_soundToggle = new SoundToggle(aMainController, aMainData);
     this.m_message = new Message(aMainController, aMainData);
     this.m_canvas = new canvas({
       width: 600,
-      height: 800,
+      height: 1200,
       animate: true,
       fps: Config.FRAME_RATE,
       onUpdate: (timestamp: DOMHighResTimeStamp, framesSinceLastRender: number) => this.handleCanvasUpdate(timestamp, framesSinceLastRender)
